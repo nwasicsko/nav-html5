@@ -1,56 +1,76 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <title>Nav</title>
-  <script>
-    
-  </script>
-  <style>
-    body {
-      margin:0px;
-      padding:0px;
-    }
-    #container {
-      border:none;
-    }
-    #nav {
-      background: black;
-      border: 1px solid black;
-    }
-    #nav ul li {
-      display: inline-block;
-    }
-    #nav a {
-      text-decoration:none;
-      color:skyblue;
-      margin-right:10px;
-    }
-    
-    
-    #nav .input {
-      margin:200%;
-    }
-    
-    #logo {
-      font-size: 15pt;
-      a
-    }
-  </style>
-</head>
-
-<body>
-<div id="container">
-  <div id="nav">
-    <ul>
-      <li class="home"><a href="javascript:void(0)">Home</a></li>
-      <li><a href="javascript:void(0)">Service</a></li>
-      <li><a href="javascript:void(0)">About</a></li>
-      <li><a href="javascript:void(0)">Contacts</a></li>
-      <li><a href="javascript:void(0)">Login</a></li>
-      <li><a href="javascript:void(0)">Signup</a></li>
+  <head>
+    <title>Nav Dropdown</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #888888;
+      }
+      nav {
+        background-color: cyan;
+        color: #aaa;
+        font-size: 20px;
+        font-weight: bold;
+        padding-right:30px;
+        text-align: left;
+        filter: brightness(200%);
+      }
+      nav li {
+        box-sizing: border-box;
+        display:inline-block;
+        padding:20px;
+        cursor: pointer;
+      }
+      nav li:hover {
+        background: #97cccc;
+      }
+      .dropdown{
+        position: relative;
+      }
+      .dropdown-content{
+        position: absolute;
+        top:100%;
+        left:0%;
+        text-align: left;
+        display:none;
+      }
       
-  </ul>
-</div>
-</div>
-</body>
+      .dropdown-content li {
+        background: cyan;
+        width:100%;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      a {
+        text-decoration:none;
+        color:#aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown"><a href="#">Link</a>
+          <ul class="dropdown-content">
+            <li><a href="#">link1</a></li>
+            <li><a href="#">link2</a></li>
+            <li><a href="#">link3</a></li>
+            <li><a href="#">link4</a></li>
+            <li><a href="#">link5</a></li>
+          </ul>
+          </li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>
